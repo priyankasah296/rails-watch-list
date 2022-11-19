@@ -1,11 +1,10 @@
 <div class="container">
-  <h1>lists#new (Create New List )</h1>
-
+  <h1>lists#edit - <%= @list.name %></h1>
   <%= render "form", list: @list %>
 
   <hr>
 
   <div>
+    <%= link_to "Show List", list_path %>
     <%= link_to "Back to lists", lists_path %>
-  </div>
 </div>

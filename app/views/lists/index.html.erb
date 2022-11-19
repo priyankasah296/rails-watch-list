@@ -1,2 +1,12 @@
-<h1>Hello!</h1>
-<p>This is my index page</p>
+<div class="container">
+  <h1>Lists#index</h1>
+  <hr>
+  <div id="lists">
+    <% @lists.each do |list| %>
+      <p><%= link_to list.name, list %> <%= list.id %></p>
+    <% end %>
+    <hr>
+  </div>
+
+  <%= link_to "Create New list", new_list_path %>
+</div>
