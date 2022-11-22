@@ -3,9 +3,7 @@
   <h1>list#show</h1>
   <h2><%= @list.name %></h2>
   <hr>
-  <% @movies.each do |movie| %>
-    <h3><%= movie.title %></h3>
-    <h4><%= %>
+
 
   <hr>
   <p>
@@ -16,6 +14,6 @@
   </p>
   <p><%= link_to "Edit List", edit_list_path %></p>
   <p><%= link_to "back to lists", lists_path %></p>
-  <%= link_to "Add bookmark", new_list_bookmark_path %>
+  <%= link_to "Add bookmark", new_list_bookmark_path(@list) %>
 
 </div>
