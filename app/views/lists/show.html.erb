@@ -3,8 +3,9 @@
   <h1>list#show</h1>
   <h2><%= @list.name %></h2>
   <hr>
-
-
+  <% @list.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
   <hr>
   <p>
     <%= link_to "Delete",
